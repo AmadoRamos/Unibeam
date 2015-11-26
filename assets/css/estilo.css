@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* CSS Document */
+div.centrado {
+	text-align: center;
+}
+div.centrado table {
+	margin: 0 auto;
+	text-align: left;
+}
+a {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-style:italic;
+	text-decoration: none;
+}
+body {
+	background-color: rgba(235, 235, 235, .2);
+	text-align:center;
+	margin:0 auto;
+}
+#div2 {
+	background-color: rgb(255,255,255);
+	margin: 0 auto;
+	text-align: center;
+}
+h1 {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 24px;
+	text-align: center;
+}
+h2 {
+	text-wrap: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+}
+h3 {
+	text-wrap: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	color: #000;
+}
+#boton {
+	border: #66FF66 1px solid;
+	font-family: Verdana;
+	font-size: 13px;
+	background-color: #DEDEDE;
+	font-weight: bold;
+	background-image: url(../images/module_box_header.png);
+	margin: 0 auto;
+	text-aling:center;
+}
+#contenedor {
+	margin: 20px auto;
+	text-align:left;
+	width:70%;
+	border: 2px solid black;
+	padding: 10px 40px;
+	border-radius:15px;
+	width: 250px;
+	background-image: linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+	background-image: -o-linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+	background-image: -moz-linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+	background-image: -webkit-linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+	background-image: -ms-linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+ linear, left top, left bottom, color-stop(0.48, rgb(183,194,235)), color-stop(0.74, rgb(220,233,255))
+}
+#contenedor2 {
+	margin: 20px auto;
+	text-align:center;
+	width:70%;
+	/*border: 1px solid gray;
+	padding: 10px 40px;
+	border-radius:15px;*/
+	width: 550px;
+	background-image: linear-gradient(bottom, rgb(237,237,237) 22%, rgb(252,252,252) 66%);
+	background-image: -o-linear-gradient(bottom, rgb(237,237,237) 22%, rgb(252,252,252) 66%);
+	background-image: -moz-linear-gradient(bottom, rgb(237,237,237) 22%, rgb(252,252,252) 66%);
+	background-image: -webkit-linear-gradient(bottom, rgb(237,237,237) 22%, rgb(252,252,252) 66%);
+	background-image: -ms-linear-gradient(bottom, rgb(237,237,237) 22%, rgb(252,252,252) 66%);
+	background-image: -webkit-gradient(  linear,  left bottom,  left top,  color-stop(0.22, rgb(237,237,237)),  color-stop(0.66, rgb(252,252,252)) );
+}
+
+#contenedor3 {
+	margin: 20px auto;
+	text-align:left;
+	width:70%;
+	border: 2px solid black;
+	padding: 10px 40px;
+	border-radius:15px;
+	width: 350px;
+	background-image: linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+	background-image: -o-linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+	background-image: -moz-linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+	background-image: -webkit-linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+	background-image: -ms-linear-gradient(top, rgb(183,194,235) 48%, rgb(220,233,255) 74%);
+ linear, left top, left bottom, color-stop(0.48, rgb(183,194,235)), color-stop(0.74, rgb(220,233,255))
+}
+table#vsTable {
+	position: relative;
+	z-index: 2;
+	border: none;
+	border-bottom: 2px solid #303030;
+	border-collapse: collapse;
+	margin: 0 auto;
+	border-right: 1px solid #c7c7c7;
+	width: 100%;
+	font-size: 12px;
+	text-align: left;
+	border-left: 1px solid #c7c7c7;
+}
+table#vsTable td {
+	padding: 10px 0;
+	border-bottom: 2px solid #e7e7e7;
+	vertical-align: middle;
+	text-align: center;
+	background: #f7f7f7;
+	color: #707070;
+}
+table#vsTable tr td div {
+	text-align: center;
+}
+table#vsTable tr td div.yes, table#vsTable tr td div.no, table#vsTable tr td div.partial {
+	height: 16px;
+}
+table#vsTable tr td.cat div, table#vsTable tr td.title div {
+	height: auto;
+}
+table#vsTable td.cat div {
+	text-align: left;
+	padding: 0 10px;
+}
+table#vsTable td.title {
+	background: #303030;
+	font-size: 16px;
+	color: #f7f7f7;
+	vertical-align: middle;
+	text-align: center;
+}
+table#vsTable .cat {
+	text-align: left;
+	background: #eee;
+	border-left: 1px solid #c7c7c7;
+}
+table#vsTable td.title.cat {
+	background: none !important;
+	border: none;
+	border-bottom: 1px solid #c7c7c7;
+	cursor: default !important;
+}
+table#vsTable td.title.cat div {
+	display: none;
+}
+table#vsTable tr td.cat:hover {
+	background: #fff;
+}
+table#vsTable tr td.title:hover {
+	background: #404040;
+}
+table#vsTable tr td:hover {
+	background: #fff;
+}
+table#vsTable div.yes {
+	background: url(images/yes.png) no-repeat center center;
+}
+table#vsTable div.no {
+	background: url(images/no.png) no-repeat center center;
+}
+table#vsTable div.partial {
+	background: url(images/partial.png) no-repeat center center;
+}
+table#vsTable .title .editable input {
+	color: #fff;
+}
+table#vsTable .titleImage {
+	padding: 0;
+	margin: 0;
+	border: none;
+	width: 90%;
+	float: none;
+	height: auto;
+}
