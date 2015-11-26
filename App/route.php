@@ -14,5 +14,13 @@
 	Route::new_route("/facultades/eliminar/{id}", "FacultadController@eliminar");
 	Route::new_route("/facultades/editar/{id}", "FacultadController@editar");
 	Route::new_route("/facultades/actualizar/{id}", "FacultadController@actualizar");
+
+	Route::new_route("/programas", "ProgramaController@index");
+	Route::new_route("/programas/create", "ProgramaController@create");
+	Route::new_route("/programas/eliminar/{id}", "ProgramaController@eliminar");
+	Route::new_route("/programas/editar/{id}", "ProgramaController@editar");
+	Route::new_route("/programas/actualizar/{id}", "ProgramaController@actualizar");
+
+
 	Route::new_route("/", "HolaController@index");
 ?>

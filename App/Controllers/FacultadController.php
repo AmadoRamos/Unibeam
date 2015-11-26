@@ -23,7 +23,6 @@
 		{
 			$facultad = new Facultad;
 			$result =  $facultad->all();
-
 			return View::render("facultades.index", [ 'facultades' => $result ]);
 		}
 

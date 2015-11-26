@@ -21,6 +21,11 @@
 					<a href="<?=action('FacultadController@index')?>">Facultades</a>
 				</td>
 			</tr>
+			<tr>
+				<td>
+					<a href="<?=action('ProgramaController@index')?>">Programas</a>
+				</td>
+			</tr>
 		</tbody>
 	</table>
 </body>

@@ -8,6 +8,24 @@
 	{
 		private $query;
 
+		public function hasOne($model, $foreign_key="id", $local_key="id")
+		{
+			$class = sprintf("\App\Models\%s", $model);
+
+			$entity = new $class;
+			$result = $entity->select()->where($foreign_key, $this->{$local_key})->get();
+			return $result;
+		}
+
+		public function hasMany($model, $local_key="id", $foreign_key="id")
+		{
+			$class = sprintf("\App\Models\%s", $model);
+
+			$entity = new $class;
+			$result = $entity->select()->where($foreign_key, $this->{$local_key})->get();
+			return $result;
+		}
+
 		public function select($select="*")
 		{
 			$this->query = "SELECT {$select} FROM {$this->table}";
@@ -66,8 +84,15 @@
 			if( $r )
 			{
 				$results	 = array();
-				while ( $object = mysql_fetch_object($r) ) {
-					$results[] = $object;
+				while ( $array = mysql_fetch_array($r) ) 
+				{
+					$class 	= get_class($this);
+					$entity = new $class;
+					foreach ($array as $key => $value) 
+					{
+						$entity->{$key} = $value;
+					}
+					$results[] = $entity;
 				}
 				return $results;
 			} 
@@ -107,13 +132,28 @@
 			$result = DB::query( $this->query );
 			if( mysql_num_rows($result) > 1 )
 			{
-				while ( $object =  mysql_fetch_object($result)) {
-					$r[] = $object;
+				while ( $array =  mysql_fetch_object($result)) {
+					$class 	= get_class($this);
+					$entity = new $class;
+					foreach ($array as $key => $value) 
+					{
+						$entity->{$key} = $value;
+					}
+					$results[] = $entity;
 				}
 				return $r;
 			}
 			else
-				return mysql_fetch_object($result);
+			{
+				$class 	= get_class($this);
+				$entity = new $class;
+				$array 	= mysql_fetch_array($result);
+				foreach ($array as $key => $value) 
+				{
+					$entity->{$key} = $value;
+				}
+				return $entity;
+			}
 		}
 
 
